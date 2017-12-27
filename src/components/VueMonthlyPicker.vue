@@ -73,6 +73,10 @@ export default {
     dateFormat: {
       type: String,
       default: 'YYYY/MM'
+    },
+    locale: {
+      type: String,
+      default: 'en'
     }
   },
   data () {
@@ -83,6 +87,7 @@ export default {
     }
   },
   mounted () {
+    moment.locale(this.locale)
     this.init()
   },
   watch: {

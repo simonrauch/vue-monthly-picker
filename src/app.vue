@@ -9,6 +9,8 @@
        :monthLabels="locale"
        :min="min"
        :max="max"
+       :dateFormat='dateFormat'
+       locale="de"
        @selected="handleSelect"
        v-model="selectedMonth">
       </vue-monthly-picker>
@@ -54,6 +56,7 @@ export default {
   name: 'app',
   data () {
     return {
+      dateFormat: 'MMMM YYYY',
       selectedMonth: moment(),
       isDisable: false,
       isDisplayInput: true,
